@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SPS obrazy!</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Ako poznáte chodby GJH?</h1>
+    <select id="select-template">
+      <optgroup label="Fotka">
+        <option value="photo">Číslo fotky</option>
+        <option value="floor">Poschodie, kde je fotka</option>
+        <option value="side">Strana, kde je fotka</option>
+      </optgroup>
+      <optgroup label="Hádajúci">
+        <option value="age">Vek</option>
+        <option value="yearsAtSchool">Roky na škole</option>
+        <option value="local">Kmeňová trieda</option>
+      </optgroup>
+      <optgroup label="Odpoveď">
+        <option value="seen">Známe?</option>
+        <option value="correct">Správne?</option>
+        <option value="guessedFloor">Hádané poschodie</option>
+        <option value="guessedSide">Hádaná strana</option>
+      </optgroup>
+    </select>
+    <div id="block-filter">
+      <h2>Filtrovať dáta</h2>
+      <button id="btn-add-filter">+ pridať filter</button><br />
+    </div>
+    <div id="block-sort">
+      <h2>Roztriediť podľa</h2>
+      <select id="categories" class="update">
+        <optgroup label="Fotka">
+          <option value="photo" selected>Číslo fotky</option>
+          <option value="floor">Poschodie, kde je fotka</option>
+          <option value="side">Strana, kde je fotka</option>
+        </optgroup>
+        <optgroup label="Hádajúci">
+          <option value="age">Vek</option>
+          <option value="yearsAtSchool">Roky na škole</option>
+          <option value="local">Kmeňová trieda</option>
+        </optgroup>
+        <optgroup label="Odpoveď">
+          <option value="seen">Známe?</option>
+          <option value="correct">Správne?</option>
+          <option value="guessedFloor">Hádané poschodie</option>
+          <option value="guessedSide">Hádaná strana</option>
+        </optgroup>
+      </select>
+    </div>
+    <div id="block-compare">
+      <h2>Porovnať</h2>
+      <select id="compare" class="update">
+        <optgroup label="Fotka">
+          <option value="photo">Číslo fotky</option>
+          <option value="floor">Poschodie, kde je fotka</option>
+          <option value="side">Strana, kde je fotka</option>
+        </optgroup>
+        <optgroup label="Hádajúci">
+          <option value="age">Vek</option>
+          <option value="yearsAtSchool">Roky na škole</option>
+          <option value="local">Kmeňová trieda</option>
+        </optgroup>
+        <optgroup label="Odpoveď">
+          <option value="seen">Známe?</option>
+          <option value="correct" selected>Uhádnuté?</option>
+          <option value="guessedFloor">Hádané poschodie</option>
+          <option value="guessedSide">Hádaná strana</option>
+        </optgroup>
+      </select>
+    </div>
+    <div id="result"></div>
+    <div id="legend"></div>
+  </body>
+  <script src="index.js" type="module"></script>
+</html>
